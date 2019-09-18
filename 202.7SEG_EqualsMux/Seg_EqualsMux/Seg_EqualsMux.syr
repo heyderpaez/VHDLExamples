@@ -1,0 +1,403 @@
+Release 14.2 - xst P.28xd (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.78 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.78 secs
+ 
+--> Reading design: Seg_EqualsMux.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Seg_EqualsMux.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Seg_EqualsMux"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-ft256
+
+---- Source Options
+Top Module Name                    : Seg_EqualsMux
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "E:/SEII/202.7SEG_EqualsMux/Seg_EqualsMux/Seg_EqualsMux.vhd" in Library work.
+Entity <seg_equalsmux> compiled.
+Entity <seg_equalsmux> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Seg_EqualsMux> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Seg_EqualsMux> in library <work> (Architecture <behavioral>).
+Entity <Seg_EqualsMux> analyzed. Unit <Seg_EqualsMux> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Seg_EqualsMux>.
+    Related source file is "E:/SEII/202.7SEG_EqualsMux/Seg_EqualsMux/Seg_EqualsMux.vhd".
+    Found finite state machine <FSM_0> for signal <STDO_PRES>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 8                                              |
+    | Clock              | CLK                       (rising_edge)        |
+    | Clock enable       | STDO_PRES$not0000         (positive)           |
+    | Power Up State     | display0                                       |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit up counter for signal <CONTADOR>.
+    Found 4-bit comparator greatequal for signal <equals$cmp_ge0000> created at line 51.
+    Found 32-bit comparator less for signal <STDO_PRES$cmp_lt0000> created at line 136.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred   2 Comparator(s).
+Unit <Seg_EqualsMux> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Comparators                                          : 2
+ 32-bit comparator less                                : 1
+ 4-bit comparator greatequal                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <STDO_PRES/FSM> on signal <STDO_PRES[1:4]> with one-hot encoding.
+----------------------
+ State    | Encoding
+----------------------
+ display0 | 0001
+ display1 | 0010
+ display2 | 0100
+ display3 | 1000
+----------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Comparators                                          : 2
+ 32-bit comparator less                                : 1
+ 4-bit comparator greatequal                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Seg_EqualsMux> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Seg_EqualsMux, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 36
+ Flip-Flops                                            : 36
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Seg_EqualsMux.ngr
+Top Level Output File Name         : Seg_EqualsMux
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 25
+
+Cell Usage :
+# BELS                             : 168
+#      GND                         : 1
+#      INV                         : 8
+#      LUT1                        : 33
+#      LUT2                        : 1
+#      LUT3                        : 6
+#      LUT4                        : 44
+#      MUXCY                       : 42
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 36
+#      FDE                         : 4
+#      FDR                         : 32
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 12
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-5 
+
+ Number of Slices:                       47  out of   1920     2%  
+ Number of Slice Flip Flops:             36  out of   3840     0%  
+ Number of 4 input LUTs:                 92  out of   3840     2%  
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    173    14%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 36    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.812ns (Maximum Frequency: 172.056MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 10.704ns
+   Maximum combinational path delay: 12.295ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 5.812ns (frequency: 172.056MHz)
+  Total number of paths / destination ports: 1576 / 72
+-------------------------------------------------------------------------
+Delay:               5.812ns (Levels of Logic = 12)
+  Source:            CONTADOR_3 (FF)
+  Destination:       CONTADOR_0 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: CONTADOR_3 to CONTADOR_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.626   1.040  CONTADOR_3 (CONTADOR_3)
+     LUT1:I0->O            1   0.479   0.000  Mcompar_STDO_PRES_cmp_lt0000_cy<0>_rt (Mcompar_STDO_PRES_cmp_lt0000_cy<0>_rt)
+     MUXCY:S->O            1   0.435   0.000  Mcompar_STDO_PRES_cmp_lt0000_cy<0> (Mcompar_STDO_PRES_cmp_lt0000_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_STDO_PRES_cmp_lt0000_cy<1> (Mcompar_STDO_PRES_cmp_lt0000_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_STDO_PRES_cmp_lt0000_cy<2> (Mcompar_STDO_PRES_cmp_lt0000_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_STDO_PRES_cmp_lt0000_cy<3> (Mcompar_STDO_PRES_cmp_lt0000_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_STDO_PRES_cmp_lt0000_cy<4> (Mcompar_STDO_PRES_cmp_lt0000_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_STDO_PRES_cmp_lt0000_cy<5> (Mcompar_STDO_PRES_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_STDO_PRES_cmp_lt0000_cy<6> (Mcompar_STDO_PRES_cmp_lt0000_cy<6>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_STDO_PRES_cmp_lt0000_cy<7> (Mcompar_STDO_PRES_cmp_lt0000_cy<7>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_STDO_PRES_cmp_lt0000_cy<8> (Mcompar_STDO_PRES_cmp_lt0000_cy<8>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_STDO_PRES_cmp_lt0000_cy<9> (Mcompar_STDO_PRES_cmp_lt0000_cy<9>)
+     MUXCY:CI->O          36   0.246   1.595  Mcompar_STDO_PRES_cmp_lt0000_cy<10> (Mcompar_STDO_PRES_cmp_lt0000_cy<10>)
+     FDR:R                     0.892          CONTADOR_0
+    ----------------------------------------
+    Total                      5.812ns (3.177ns logic, 2.635ns route)
+                                       (54.7% logic, 45.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 47 / 12
+-------------------------------------------------------------------------
+Offset:              10.704ns (Levels of Logic = 4)
+  Source:            STDO_PRES_FSM_FFd2 (FF)
+  Destination:       SEG<0> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: STDO_PRES_FSM_FFd2 to SEG<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             10   0.626   1.259  STDO_PRES_FSM_FFd2 (STDO_PRES_FSM_FFd2)
+     LUT2:I0->O            3   0.479   0.941  SEG<5>174 (SEG<0>230)
+     LUT4:I1->O            1   0.479   0.851  SEG<0>248_SW0 (N50)
+     LUT4:I1->O            1   0.479   0.681  SEG<0>248 (SEG_0_OBUF)
+     OBUF:I->O                 4.909          SEG_0_OBUF (SEG<0>)
+    ----------------------------------------
+    Total                     10.704ns (6.972ns logic, 3.732ns route)
+                                       (65.1% logic, 34.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 136 / 7
+-------------------------------------------------------------------------
+Delay:               12.295ns (Levels of Logic = 6)
+  Source:            A<3> (PAD)
+  Destination:       SEG<2> (PAD)
+
+  Data Path: A<3> to SEG<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   0.715   1.216  A_3_IBUF (A_3_IBUF)
+     LUT4:I0->O            5   0.479   1.078  equals1 (equals)
+     LUT3:I0->O            1   0.479   0.740  SEG<1>216 (SEG<1>216)
+     LUT4:I2->O            2   0.479   1.040  SEG<1>235 (N6)
+     LUT4:I0->O            1   0.479   0.681  SEG<2>103 (SEG_2_OBUF)
+     OBUF:I->O                 4.909          SEG_2_OBUF (SEG<2>)
+    ----------------------------------------
+    Total                     12.295ns (7.540ns logic, 4.755ns route)
+                                       (61.3% logic, 38.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.94 secs
+ 
+--> 
+
+Total memory usage is 150268 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

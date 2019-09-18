@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/VHDL_Code</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/SEII/Temporizador1se/VHDL_Code.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">H:/3. CUC/0. Docencia/1. S. Embebidos II/2. Programas/Temporizador1se/VHDL_Code.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/VHDL_Code/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/SEII/Temporizador1se/VHDL_Code.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">H:/3. CUC/0. Docencia/1. S. Embebidos II/2. Programas/Temporizador1se/VHDL_Code.vhd</arg>&quot;.
+</msg>
+
+</messages>
+

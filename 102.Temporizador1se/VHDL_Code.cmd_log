@@ -1,0 +1,36 @@
+xst -intstyle ise -ifn "D:/3. CUC/0. Docencia/3. Sistemas Embebidos II/2. Programas/Temporizador1se/VHDL_Code.xst" -ofn "D:/3. CUC/0. Docencia/3. Sistemas Embebidos II/2. Programas/Temporizador1se/VHDL_Code.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Net_List_Temporizador.ucf -p xc3s500e-ft256-4 "VHDL_Code.ngc" VHDL_Code.ngd  
+map -intstyle ise -p xc3s500e-ft256-4 -cm area -ir off -pr off -c 100 -o VHDL_Code_map.ncd VHDL_Code.ngd VHDL_Code.pcf 
+par -w -intstyle ise -ol high -t 1 VHDL_Code_map.ncd VHDL_Code.ncd VHDL_Code.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml VHDL_Code.twx VHDL_Code.ncd -o VHDL_Code.twr VHDL_Code.pcf -ucf Net_List_Temporizador.ucf 
+bitgen -intstyle ise -f VHDL_Code.ut VHDL_Code.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/Administrador/Escritorio/Temporizador1se/VHDL_Code.xst" -ofn "C:/Documents and Settings/Administrador/Escritorio/Temporizador1se/VHDL_Code.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Net_List_Temporizador.ucf -p xc3s200-ft256-4 "VHDL_Code.ngc" VHDL_Code.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o VHDL_Code_map.ncd VHDL_Code.ngd VHDL_Code.pcf 
+par -w -intstyle ise -ol high -t 1 VHDL_Code_map.ncd VHDL_Code.ncd VHDL_Code.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml VHDL_Code.twx VHDL_Code.ncd -o VHDL_Code.twr VHDL_Code.pcf -ucf Net_List_Temporizador.ucf 
+bitgen -intstyle ise -f VHDL_Code.ut VHDL_Code.ncd 
+xst -intstyle ise -ifn "E:/SEII/Temporizador1se/VHDL_Code.xst" -ofn "E:/SEII/Temporizador1se/VHDL_Code.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Net_List_Temporizador.ucf -p xc3s200-ft256-4 VHDL_Code.ngc VHDL_Code.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o VHDL_Code_map.ncd VHDL_Code.ngd VHDL_Code.pcf 
+par -w -intstyle ise -ol high -t 1 VHDL_Code_map.ncd VHDL_Code.ncd VHDL_Code.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml VHDL_Code.twx VHDL_Code.ncd -o VHDL_Code.twr VHDL_Code.pcf -ucf Net_List_Temporizador.ucf 
+bitgen -intstyle ise -f VHDL_Code.ut VHDL_Code.ncd 
+xst -intstyle ise -ifn "E:/SEII/Temporizador1se/VHDL_Code.xst" -ofn "E:/SEII/Temporizador1se/VHDL_Code.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Net_List_Temporizador.ucf -p xc3s200-ft256-4 VHDL_Code.ngc VHDL_Code.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o VHDL_Code_map.ncd VHDL_Code.ngd VHDL_Code.pcf 
+par -w -intstyle ise -ol high -t 1 VHDL_Code_map.ncd VHDL_Code.ncd VHDL_Code.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml VHDL_Code.twx VHDL_Code.ncd -o VHDL_Code.twr VHDL_Code.pcf -ucf Net_List_Temporizador.ucf 
+bitgen -intstyle ise -f VHDL_Code.ut VHDL_Code.ncd 
+xst -intstyle ise -ifn "E:/SEII/Temporizador1se/VHDL_Code.xst" -ofn "E:/SEII/Temporizador1se/VHDL_Code.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Net_List_Temporizador.ucf -p xc3s100e-cp132-4 VHDL_Code.ngc VHDL_Code.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o VHDL_Code_map.ncd VHDL_Code.ngd VHDL_Code.pcf 
+par -w -intstyle ise -ol high -t 1 VHDL_Code_map.ncd VHDL_Code.ncd VHDL_Code.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml VHDL_Code.twx VHDL_Code.ncd -o VHDL_Code.twr VHDL_Code.pcf -ucf Net_List_Temporizador.ucf 
+bitgen -intstyle ise -f VHDL_Code.ut VHDL_Code.ncd 
+xst -intstyle ise -ifn "H:/3. CUC/0. Docencia/1. S. Embebidos II/2. Programas/Temporizador1se/VHDL_Code.xst" -ofn "H:/3. CUC/0. Docencia/1. S. Embebidos II/2. Programas/Temporizador1se/VHDL_Code.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Net_List_Temporizador.ucf -p xc3s100e-cp132-4 "VHDL_Code.ngc" VHDL_Code.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o VHDL_Code_map.ncd VHDL_Code.ngd VHDL_Code.pcf 
+par -w -intstyle ise -ol high -t 1 VHDL_Code_map.ncd VHDL_Code.ncd VHDL_Code.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml VHDL_Code.twx VHDL_Code.ncd -o VHDL_Code.twr VHDL_Code.pcf -ucf Net_List_Temporizador.ucf 
+bitgen -intstyle ise -f VHDL_Code.ut VHDL_Code.ncd 

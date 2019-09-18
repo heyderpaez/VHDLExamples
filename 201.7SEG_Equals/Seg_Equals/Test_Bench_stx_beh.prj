@@ -1,0 +1,2 @@
+vhdl isim_temp "Seg_Equals.vhd"
+vhdl isim_temp "Test_Bench.vhd"

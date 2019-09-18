@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "H:/3. CUC/0. Docencia/1. S. Embebidos II/2. Programas/102.BCDto7SEG/BCDto7SEG/BCDto7SEG.xst" -ofn "H:/3. CUC/0. Docencia/1. S. Embebidos II/2. Programas/102.BCDto7SEG/BCDto7SEG/BCDto7SEG.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 "BCDto7SEG.ngc" BCDto7SEG.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o BCDto7SEG_map.ncd BCDto7SEG.ngd BCDto7SEG.pcf 
+par -w -intstyle ise -ol high -t 1 BCDto7SEG_map.ncd BCDto7SEG.ncd BCDto7SEG.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml BCDto7SEG.twx BCDto7SEG.ncd -o BCDto7SEG.twr BCDto7SEG.pcf 
+bitgen -intstyle ise -f BCDto7SEG.ut BCDto7SEG.ncd 
+xst -intstyle ise -ifn "H:/3. CUC/0. Docencia/1. S. Embebidos II/2. Programas/102.BCDto7SEG/BCDto7SEG/BCDto7SEG.xst" -ofn "H:/3. CUC/0. Docencia/1. S. Embebidos II/2. Programas/102.BCDto7SEG/BCDto7SEG/BCDto7SEG.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pinout.ucf -p xc3s100e-cp132-5 "BCDto7SEG.ngc" BCDto7SEG.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o BCDto7SEG_map.ncd BCDto7SEG.ngd BCDto7SEG.pcf 
+par -w -intstyle ise -ol high -t 1 BCDto7SEG_map.ncd BCDto7SEG.ncd BCDto7SEG.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml BCDto7SEG.twx BCDto7SEG.ncd -o BCDto7SEG.twr BCDto7SEG.pcf -ucf pinout.ucf 
+bitgen -intstyle ise -f BCDto7SEG.ut BCDto7SEG.ncd 
+xst -intstyle ise -ifn "H:/3. CUC/0. Docencia/1. S. Embebidos II/2. Programas/102.BCDto7SEG/BCDto7SEG/BCDto7SEG.xst" -ofn "H:/3. CUC/0. Docencia/1. S. Embebidos II/2. Programas/102.BCDto7SEG/BCDto7SEG/BCDto7SEG.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pinout.ucf -p xc3s100e-cp132-5 "BCDto7SEG.ngc" BCDto7SEG.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o BCDto7SEG_map.ncd BCDto7SEG.ngd BCDto7SEG.pcf 
+par -w -intstyle ise -ol high -t 1 BCDto7SEG_map.ncd BCDto7SEG.ncd BCDto7SEG.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml BCDto7SEG.twx BCDto7SEG.ncd -o BCDto7SEG.twr BCDto7SEG.pcf -ucf pinout.ucf 
+bitgen -intstyle ise -f BCDto7SEG.ut BCDto7SEG.ncd 

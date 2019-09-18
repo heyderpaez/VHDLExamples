@@ -1,0 +1,9 @@
+V3 3
+FL "H:/3. CUC/0. Docencia/1. S. Embebidos II/2. Programas/106.BIN8to7SEG/BIN8to7SEG/BIN8to7SEG.vhd" 2014/11/02.12:55:40 P.28xd
+EN work/BIN8toBCD 1414950981 \
+      FL "H:/3. CUC/0. Docencia/1. S. Embebidos II/2. Programas/106.BIN8to7SEG/BIN8to7SEG/BIN8to7SEG.vhd" \
+      PB ieee/std_logic_1164 1341906176 PB ieee/std_logic_arith 1341906177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1341906179
+AR work/BIN8toBCD/Behavioral 1414950982 \
+      FL "H:/3. CUC/0. Docencia/1. S. Embebidos II/2. Programas/106.BIN8to7SEG/BIN8to7SEG/BIN8to7SEG.vhd" \
+      EN work/BIN8toBCD 1414950981

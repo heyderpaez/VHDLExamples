@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "H:/3. CUC/0. Docencia/1. S. Embebidos II/2. Programas/104.BIN8toBCD/BIN8toBCD/TestBench_isim_beh.exe" -prj "H:/3. CUC/0. Docencia/1. S. Embebidos II/2. Programas/104.BIN8toBCD/BIN8toBCD/TestBench_beh.prj" "work.TestBench" 

@@ -1,0 +1,10 @@
+V3 5
+FL "C:/Documents and Settings/Administrador/Escritorio/Temporizador1se/VHDL_Code.vhd" 2011/05/19.18:48:35 P.28xd
+FL E:/SEII/Temporizador1se/VHDL_Code.vhd 2014/09/18.19:59:45 P.28xd
+FL "H:/3. CUC/0. Docencia/1. S. Embebidos II/2. Programas/Temporizador1se/VHDL_Code.vhd" 2015/09/03.20:06:00 P.28xd
+EN work/VHDL_Code 1441328768 \
+      FL "H:/3. CUC/0. Docencia/1. S. Embebidos II/2. Programas/Temporizador1se/VHDL_Code.vhd" \
+      PB ieee/std_logic_1164 1341906176 PB ieee/std_logic_arith 1341906177
+AR work/VHDL_Code/Behavioral 1441328769 \
+      FL "H:/3. CUC/0. Docencia/1. S. Embebidos II/2. Programas/Temporizador1se/VHDL_Code.vhd" \
+      EN work/VHDL_Code 1441328768

@@ -1,0 +1,20 @@
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o E:/SEII/201.7SEG_Equals/Seg_Equals/Test_Bench2_isim_beh.exe -prj E:/SEII/201.7SEG_Equals/Seg_Equals/Test_Bench2_beh.prj work.Test_Bench2 
+ISim P.28xd (signature 0x1048c146)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "E:/SEII/201.7SEG_Equals/Seg_Equals/Seg_Equals.vhd" into library work
+Parsing VHDL file "E:/SEII/201.7SEG_Equals/Seg_Equals/Test_Bench2.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 66644 KB
+Fuse CPU Usage: 546 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture behavioral of entity Seg_Equals [seg_equals_default]
+Compiling architecture behavior of entity test_bench2
+Time Resolution for simulation is 1ps.
+Compiled 5 VHDL Units
+Built simulation executable E:/SEII/201.7SEG_Equals/Seg_Equals/Test_Bench2_isim_beh.exe
+Fuse Memory Usage: 75480 KB
+Fuse CPU Usage: 1218 ms

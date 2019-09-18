@@ -1,0 +1,11 @@
+# PROMGEN: Xilinx Prom Generator P.28xd
+# Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.28xd
+DATE            10/16/2014 - 13:16
+SOURCE          E:\SEII\202.7SEG_EqualsMux\xcf02s_File.mcs
+DEVICE          XCF02S
+DATA_WIDTH      8
+FILL_DATA       0xFF
+SIGNATURE       0x02004BFA
+START_ADDRESS   0x00000000 END_ADDRESS 0x0001FF87 DIRECTION_UP   "E:/SEII/202.7SEG_EqualsMux/Seg_EqualsMux/seg_equalsmux.bit" 3s200ft256

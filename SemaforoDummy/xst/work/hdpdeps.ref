@@ -1,0 +1,7 @@
+V3 4
+FL "D:/3. CUC/0. Docencia/3. Sistemas Embebidos II/2. Programas/SemaforoDummy/Codigo.vhd" 2011/05/26.16:09:15 P.28xd
+FL E:/SEII/SemaforoDummy/Codigo.vhd 2011/05/26.17:09:15 P.28xd
+EN work/Codigo 1410797886 FL E:/SEII/SemaforoDummy/Codigo.vhd \
+      PB ieee/std_logic_1164 1270894585
+AR work/Codigo/Behavioral 1410797887 \
+      FL E:/SEII/SemaforoDummy/Codigo.vhd EN work/Codigo 1410797886

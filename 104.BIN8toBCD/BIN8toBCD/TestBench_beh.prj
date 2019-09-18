@@ -1,0 +1,2 @@
+vhdl work "BIN8toBCD.vhd"
+vhdl work "TestBench.vhd"

@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.28xd
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o E:\SEII\202.7SEG_EqualsMux//xcf02s_File -x xcf02s -u 00000000 E:/SEII/202.7SEG_EqualsMux/Seg_EqualsMux/seg_equalsmux.bit 
+
+PROM E:\SEII\202.7SEG_EqualsMux\xcf02s_File.prm map: Thu Oct 16 13:16:04 2014
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          256K
+PROM start    0000:0000
+PROM end      0003:ffff
+PROM checksum 02004bfa
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0001:ff87     Oct 16 13:09:01 2014 E:/SEII/202.7SEG_EqualsMux/Seg_EqualsMux/seg_equalsmux.bit

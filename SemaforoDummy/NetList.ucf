@@ -1,0 +1,8 @@
+Net "LEDS(0)" LOC="K12" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
+Net "LEDS(1)" LOC="N14" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
+Net "LEDS(2)" LOC="P11" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
+Net "sys_clk_pin" LOC="T9";
+Net "sys_clk_pin" IOSTANDARD = LVCMOS33;
+## System level constraints
+Net "sys_clk_pin" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD "sys_clk_pin" 20000 ps;

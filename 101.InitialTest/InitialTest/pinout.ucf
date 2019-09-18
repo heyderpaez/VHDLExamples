@@ -1,0 +1,3 @@
+Net "button" LOC="G12";
+Net "led" LOC="M5";
+Net "clk" LOC="B8";

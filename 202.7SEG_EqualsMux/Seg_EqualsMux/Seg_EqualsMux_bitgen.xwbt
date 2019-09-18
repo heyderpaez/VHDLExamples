@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\SEII\202.7SEG_EqualsMux\Seg_EqualsMux\Seg_EqualsMux.ncd
+OUTFILE=E:\SEII\202.7SEG_EqualsMux\Seg_EqualsMux\Seg_EqualsMux.bit
+FAMILY=Spartan3
+PART=xc3s200-5ft256
+WORKINGDIR=E:\SEII\202.7SEG_EqualsMux\Seg_EqualsMux
+LICENSE=WebPack
+USER_INFO=205713469_0_0_774

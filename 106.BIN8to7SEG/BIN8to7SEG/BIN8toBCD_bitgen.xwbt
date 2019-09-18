@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=H:\3. CUC\0. Docencia\1. S. Embebidos II\2. Programas\106.BIN8to7SEG\BIN8to7SEG\BIN8toBCD.ncd
+OUTFILE=H:\3. CUC\0. Docencia\1. S. Embebidos II\2. Programas\106.BIN8to7SEG\BIN8to7SEG\BIN8toBCD.bit
+FAMILY=Spartan3E
+PART=xc3s100e-5cp132
+WORKINGDIR=H:\3. CUC\0. Docencia\1. S. Embebidos II\2. Programas\106.BIN8to7SEG\BIN8to7SEG
+LICENSE=WebPack
+USER_INFO=205713469_0_0_774

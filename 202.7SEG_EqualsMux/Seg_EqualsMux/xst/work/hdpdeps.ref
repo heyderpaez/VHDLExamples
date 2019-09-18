@@ -1,0 +1,8 @@
+V3 3
+FL E:/SEII/202.7SEG_EqualsMux/Seg_EqualsMux/Seg_EqualsMux.vhd 2014/10/20.11:15:54 P.28xd
+EN work/Seg_EqualsMux 1413818189 \
+      FL E:/SEII/202.7SEG_EqualsMux/Seg_EqualsMux/Seg_EqualsMux.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/Seg_EqualsMux/Behavioral 1413818190 \
+      FL E:/SEII/202.7SEG_EqualsMux/Seg_EqualsMux/Seg_EqualsMux.vhd \
+      EN work/Seg_EqualsMux 1413818189

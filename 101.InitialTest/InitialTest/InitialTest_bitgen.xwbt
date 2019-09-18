@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=H:\3. CUC\0. Docencia\1. S. Embebidos II\2. Programas\101.InitialTest\InitialTest\InitialTest.ncd
+OUTFILE=H:\3. CUC\0. Docencia\1. S. Embebidos II\2. Programas\101.InitialTest\InitialTest\InitialTest.bit
+FAMILY=Spartan3E
+PART=xc3s100e-5cp132
+WORKINGDIR=H:\3. CUC\0. Docencia\1. S. Embebidos II\2. Programas\101.InitialTest\InitialTest
+LICENSE=WebPack
+USER_INFO=205713469_0_0_774

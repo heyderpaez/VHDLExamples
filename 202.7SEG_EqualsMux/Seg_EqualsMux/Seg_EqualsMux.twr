@@ -1,0 +1,610 @@
+--------------------------------------------------------------------------------
+Release 14.2 Trace  (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.2\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 5 -n
+3 -fastpaths -xml Seg_EqualsMux.twx Seg_EqualsMux.ncd -o Seg_EqualsMux.twr
+Seg_EqualsMux.pcf -ucf UCF_File.ucf
+
+Design file:              Seg_EqualsMux.ncd
+Physical constraint file: Seg_EqualsMux.pcf
+Device,package,speed:     xc3s200,ft256,-5 (PRODUCTION 1.39 2012-07-09)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_CLK = PERIOD TIMEGRP "CLK" 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1576 paths analyzed, 118 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.306ns.
+--------------------------------------------------------------------------------
+
+Paths for end point STDO_PRES_FSM_FFd4 (SLICE_X39Y19.CE), 29 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.694ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CONTADOR_4 (FF)
+  Destination:          STDO_PRES_FSM_FFd4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.306ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CONTADOR_4 to STDO_PRES_FSM_FFd4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y2.XQ       Tcko                  0.626   CONTADOR<4>
+                                                       CONTADOR_4
+    SLICE_X23Y6.G1       net (fanout=2)        0.936   CONTADOR<4>
+    SLICE_X23Y6.COUT     Topcyg                0.904   Mcompar_STDO_PRES_cmp_lt0000_cy<1>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_lut<1>_INV_0
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<1>
+    SLICE_X23Y7.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<1>
+    SLICE_X23Y7.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<3>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<2>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<3>
+    SLICE_X23Y8.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<3>
+    SLICE_X23Y8.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<4>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+    SLICE_X23Y9.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+    SLICE_X23Y9.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<6>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+    SLICE_X23Y10.CIN     net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+    SLICE_X23Y10.COUT    Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<8>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+    SLICE_X23Y11.CIN     net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+    SLICE_X23Y11.XB      Tcinxb                0.279   Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+    SLICE_X39Y19.CE      net (fanout=18)       2.593   Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+    SLICE_X39Y19.CLK     Tceck                 0.524   STDO_PRES_FSM_FFd4
+                                                       STDO_PRES_FSM_FFd4
+    -------------------------------------------------  ---------------------------
+    Total                                      6.306ns (2.777ns logic, 3.529ns route)
+                                                       (44.0% logic, 56.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.820ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CONTADOR_3 (FF)
+  Destination:          STDO_PRES_FSM_FFd4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.180ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CONTADOR_3 to STDO_PRES_FSM_FFd4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y1.YQ       Tcko                  0.626   CONTADOR<2>
+                                                       CONTADOR_3
+    SLICE_X23Y6.F2       net (fanout=2)        0.820   CONTADOR<3>
+    SLICE_X23Y6.COUT     Topcyf                0.894   Mcompar_STDO_PRES_cmp_lt0000_cy<1>
+                                                       CONTADOR<3>_rt.1
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<0>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<1>
+    SLICE_X23Y7.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<1>
+    SLICE_X23Y7.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<3>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<2>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<3>
+    SLICE_X23Y8.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<3>
+    SLICE_X23Y8.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<4>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+    SLICE_X23Y9.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+    SLICE_X23Y9.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<6>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+    SLICE_X23Y10.CIN     net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+    SLICE_X23Y10.COUT    Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<8>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+    SLICE_X23Y11.CIN     net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+    SLICE_X23Y11.XB      Tcinxb                0.279   Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+    SLICE_X39Y19.CE      net (fanout=18)       2.593   Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+    SLICE_X39Y19.CLK     Tceck                 0.524   STDO_PRES_FSM_FFd4
+                                                       STDO_PRES_FSM_FFd4
+    -------------------------------------------------  ---------------------------
+    Total                                      6.180ns (2.767ns logic, 3.413ns route)
+                                                       (44.8% logic, 55.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.918ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CONTADOR_14 (FF)
+  Destination:          STDO_PRES_FSM_FFd4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.082ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CONTADOR_14 to STDO_PRES_FSM_FFd4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y7.XQ       Tcko                  0.626   CONTADOR<14>
+                                                       CONTADOR_14
+    SLICE_X23Y8.G1       net (fanout=2)        0.934   CONTADOR<14>
+    SLICE_X23Y8.COUT     Topcyg                0.904   Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_lut<5>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+    SLICE_X23Y9.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+    SLICE_X23Y9.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<6>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+    SLICE_X23Y10.CIN     net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+    SLICE_X23Y10.COUT    Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<8>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+    SLICE_X23Y11.CIN     net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+    SLICE_X23Y11.XB      Tcinxb                0.279   Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+    SLICE_X39Y19.CE      net (fanout=18)       2.593   Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+    SLICE_X39Y19.CLK     Tceck                 0.524   STDO_PRES_FSM_FFd4
+                                                       STDO_PRES_FSM_FFd4
+    -------------------------------------------------  ---------------------------
+    Total                                      6.082ns (2.555ns logic, 3.527ns route)
+                                                       (42.0% logic, 58.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point STDO_PRES_FSM_FFd3 (SLICE_X39Y19.CE), 29 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.694ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CONTADOR_4 (FF)
+  Destination:          STDO_PRES_FSM_FFd3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.306ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CONTADOR_4 to STDO_PRES_FSM_FFd3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y2.XQ       Tcko                  0.626   CONTADOR<4>
+                                                       CONTADOR_4
+    SLICE_X23Y6.G1       net (fanout=2)        0.936   CONTADOR<4>
+    SLICE_X23Y6.COUT     Topcyg                0.904   Mcompar_STDO_PRES_cmp_lt0000_cy<1>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_lut<1>_INV_0
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<1>
+    SLICE_X23Y7.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<1>
+    SLICE_X23Y7.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<3>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<2>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<3>
+    SLICE_X23Y8.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<3>
+    SLICE_X23Y8.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<4>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+    SLICE_X23Y9.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+    SLICE_X23Y9.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<6>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+    SLICE_X23Y10.CIN     net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+    SLICE_X23Y10.COUT    Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<8>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+    SLICE_X23Y11.CIN     net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+    SLICE_X23Y11.XB      Tcinxb                0.279   Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+    SLICE_X39Y19.CE      net (fanout=18)       2.593   Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+    SLICE_X39Y19.CLK     Tceck                 0.524   STDO_PRES_FSM_FFd4
+                                                       STDO_PRES_FSM_FFd3
+    -------------------------------------------------  ---------------------------
+    Total                                      6.306ns (2.777ns logic, 3.529ns route)
+                                                       (44.0% logic, 56.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.820ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CONTADOR_3 (FF)
+  Destination:          STDO_PRES_FSM_FFd3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.180ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CONTADOR_3 to STDO_PRES_FSM_FFd3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y1.YQ       Tcko                  0.626   CONTADOR<2>
+                                                       CONTADOR_3
+    SLICE_X23Y6.F2       net (fanout=2)        0.820   CONTADOR<3>
+    SLICE_X23Y6.COUT     Topcyf                0.894   Mcompar_STDO_PRES_cmp_lt0000_cy<1>
+                                                       CONTADOR<3>_rt.1
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<0>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<1>
+    SLICE_X23Y7.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<1>
+    SLICE_X23Y7.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<3>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<2>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<3>
+    SLICE_X23Y8.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<3>
+    SLICE_X23Y8.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<4>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+    SLICE_X23Y9.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+    SLICE_X23Y9.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<6>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+    SLICE_X23Y10.CIN     net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+    SLICE_X23Y10.COUT    Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<8>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+    SLICE_X23Y11.CIN     net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+    SLICE_X23Y11.XB      Tcinxb                0.279   Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+    SLICE_X39Y19.CE      net (fanout=18)       2.593   Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+    SLICE_X39Y19.CLK     Tceck                 0.524   STDO_PRES_FSM_FFd4
+                                                       STDO_PRES_FSM_FFd3
+    -------------------------------------------------  ---------------------------
+    Total                                      6.180ns (2.767ns logic, 3.413ns route)
+                                                       (44.8% logic, 55.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.918ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CONTADOR_14 (FF)
+  Destination:          STDO_PRES_FSM_FFd3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.082ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CONTADOR_14 to STDO_PRES_FSM_FFd3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y7.XQ       Tcko                  0.626   CONTADOR<14>
+                                                       CONTADOR_14
+    SLICE_X23Y8.G1       net (fanout=2)        0.934   CONTADOR<14>
+    SLICE_X23Y8.COUT     Topcyg                0.904   Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_lut<5>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+    SLICE_X23Y9.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+    SLICE_X23Y9.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<6>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+    SLICE_X23Y10.CIN     net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+    SLICE_X23Y10.COUT    Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<8>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+    SLICE_X23Y11.CIN     net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+    SLICE_X23Y11.XB      Tcinxb                0.279   Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+    SLICE_X39Y19.CE      net (fanout=18)       2.593   Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+    SLICE_X39Y19.CLK     Tceck                 0.524   STDO_PRES_FSM_FFd4
+                                                       STDO_PRES_FSM_FFd3
+    -------------------------------------------------  ---------------------------
+    Total                                      6.082ns (2.555ns logic, 3.527ns route)
+                                                       (42.0% logic, 58.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point STDO_PRES_FSM_FFd2 (SLICE_X38Y18.CE), 29 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.727ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CONTADOR_4 (FF)
+  Destination:          STDO_PRES_FSM_FFd2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.273ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CONTADOR_4 to STDO_PRES_FSM_FFd2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y2.XQ       Tcko                  0.626   CONTADOR<4>
+                                                       CONTADOR_4
+    SLICE_X23Y6.G1       net (fanout=2)        0.936   CONTADOR<4>
+    SLICE_X23Y6.COUT     Topcyg                0.904   Mcompar_STDO_PRES_cmp_lt0000_cy<1>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_lut<1>_INV_0
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<1>
+    SLICE_X23Y7.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<1>
+    SLICE_X23Y7.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<3>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<2>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<3>
+    SLICE_X23Y8.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<3>
+    SLICE_X23Y8.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<4>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+    SLICE_X23Y9.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+    SLICE_X23Y9.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<6>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+    SLICE_X23Y10.CIN     net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+    SLICE_X23Y10.COUT    Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<8>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+    SLICE_X23Y11.CIN     net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+    SLICE_X23Y11.XB      Tcinxb                0.279   Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+    SLICE_X38Y18.CE      net (fanout=18)       2.560   Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+    SLICE_X38Y18.CLK     Tceck                 0.524   STDO_PRES_FSM_FFd2
+                                                       STDO_PRES_FSM_FFd2
+    -------------------------------------------------  ---------------------------
+    Total                                      6.273ns (2.777ns logic, 3.496ns route)
+                                                       (44.3% logic, 55.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.853ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CONTADOR_3 (FF)
+  Destination:          STDO_PRES_FSM_FFd2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.147ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CONTADOR_3 to STDO_PRES_FSM_FFd2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y1.YQ       Tcko                  0.626   CONTADOR<2>
+                                                       CONTADOR_3
+    SLICE_X23Y6.F2       net (fanout=2)        0.820   CONTADOR<3>
+    SLICE_X23Y6.COUT     Topcyf                0.894   Mcompar_STDO_PRES_cmp_lt0000_cy<1>
+                                                       CONTADOR<3>_rt.1
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<0>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<1>
+    SLICE_X23Y7.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<1>
+    SLICE_X23Y7.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<3>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<2>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<3>
+    SLICE_X23Y8.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<3>
+    SLICE_X23Y8.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<4>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+    SLICE_X23Y9.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+    SLICE_X23Y9.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<6>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+    SLICE_X23Y10.CIN     net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+    SLICE_X23Y10.COUT    Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<8>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+    SLICE_X23Y11.CIN     net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+    SLICE_X23Y11.XB      Tcinxb                0.279   Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+    SLICE_X38Y18.CE      net (fanout=18)       2.560   Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+    SLICE_X38Y18.CLK     Tceck                 0.524   STDO_PRES_FSM_FFd2
+                                                       STDO_PRES_FSM_FFd2
+    -------------------------------------------------  ---------------------------
+    Total                                      6.147ns (2.767ns logic, 3.380ns route)
+                                                       (45.0% logic, 55.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.951ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CONTADOR_14 (FF)
+  Destination:          STDO_PRES_FSM_FFd2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.049ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CONTADOR_14 to STDO_PRES_FSM_FFd2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y7.XQ       Tcko                  0.626   CONTADOR<14>
+                                                       CONTADOR_14
+    SLICE_X23Y8.G1       net (fanout=2)        0.934   CONTADOR<14>
+    SLICE_X23Y8.COUT     Topcyg                0.904   Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_lut<5>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+    SLICE_X23Y9.CIN      net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<5>
+    SLICE_X23Y9.COUT     Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<6>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+    SLICE_X23Y10.CIN     net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<7>
+    SLICE_X23Y10.COUT    Tbyp                  0.111   Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<8>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+    SLICE_X23Y11.CIN     net (fanout=1)        0.000   Mcompar_STDO_PRES_cmp_lt0000_cy<9>
+    SLICE_X23Y11.XB      Tcinxb                0.279   Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+                                                       Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+    SLICE_X38Y18.CE      net (fanout=18)       2.560   Mcompar_STDO_PRES_cmp_lt0000_cy<10>
+    SLICE_X38Y18.CLK     Tceck                 0.524   STDO_PRES_FSM_FFd2
+                                                       STDO_PRES_FSM_FFd2
+    -------------------------------------------------  ---------------------------
+    Total                                      6.049ns (2.555ns logic, 3.494ns route)
+                                                       (42.2% logic, 57.8% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_CLK = PERIOD TIMEGRP "CLK" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point STDO_PRES_FSM_FFd2 (SLICE_X38Y18.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.743ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               STDO_PRES_FSM_FFd3 (FF)
+  Destination:          STDO_PRES_FSM_FFd2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.743ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 20.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: STDO_PRES_FSM_FFd3 to STDO_PRES_FSM_FFd2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X39Y19.YQ      Tcko                  0.501   STDO_PRES_FSM_FFd4
+                                                       STDO_PRES_FSM_FFd3
+    SLICE_X38Y18.BX      net (fanout=13)       0.488   STDO_PRES_FSM_FFd3
+    SLICE_X38Y18.CLK     Tckdi       (-Th)     0.246   STDO_PRES_FSM_FFd2
+                                                       STDO_PRES_FSM_FFd2
+    -------------------------------------------------  ---------------------------
+    Total                                      0.743ns (0.255ns logic, 0.488ns route)
+                                                       (34.3% logic, 65.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point STDO_PRES_FSM_FFd4 (SLICE_X39Y19.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.764ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               STDO_PRES_FSM_FFd1 (FF)
+  Destination:          STDO_PRES_FSM_FFd4 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.764ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 20.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: STDO_PRES_FSM_FFd1 to STDO_PRES_FSM_FFd4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y18.YQ      Tcko                  0.501   STDO_PRES_FSM_FFd2
+                                                       STDO_PRES_FSM_FFd1
+    SLICE_X39Y19.BX      net (fanout=7)        0.509   STDO_PRES_FSM_FFd1
+    SLICE_X39Y19.CLK     Tckdi       (-Th)     0.246   STDO_PRES_FSM_FFd4
+                                                       STDO_PRES_FSM_FFd4
+    -------------------------------------------------  ---------------------------
+    Total                                      0.764ns (0.255ns logic, 0.509ns route)
+                                                       (33.4% logic, 66.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point STDO_PRES_FSM_FFd3 (SLICE_X39Y19.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.795ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               STDO_PRES_FSM_FFd4 (FF)
+  Destination:          STDO_PRES_FSM_FFd3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.795ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 20.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: STDO_PRES_FSM_FFd4 to STDO_PRES_FSM_FFd3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X39Y19.XQ      Tcko                  0.501   STDO_PRES_FSM_FFd4
+                                                       STDO_PRES_FSM_FFd4
+    SLICE_X39Y19.BY      net (fanout=10)       0.499   STDO_PRES_FSM_FFd4
+    SLICE_X39Y19.CLK     Tckdi       (-Th)     0.205   STDO_PRES_FSM_FFd4
+                                                       STDO_PRES_FSM_FFd3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.795ns (0.296ns logic, 0.499ns route)
+                                                       (37.2% logic, 62.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_CLK = PERIOD TIMEGRP "CLK" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 18.634ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 0.683ns (Tcl)
+  Physical resource: CONTADOR<0>/CLK
+  Logical resource: CONTADOR_0/CK
+  Location pin: SLICE_X22Y0.CLK
+  Clock network: CLK_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.634ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.683ns (Tch)
+  Physical resource: CONTADOR<0>/CLK
+  Logical resource: CONTADOR_0/CK
+  Location pin: SLICE_X22Y0.CLK
+  Clock network: CLK_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.634ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 1.366ns (732.064MHz) (Tcp)
+  Physical resource: CONTADOR<0>/CLK
+  Logical resource: CONTADOR_0/CK
+  Location pin: SLICE_X22Y0.CLK
+  Clock network: CLK_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    6.306|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 1576 paths, 0 nets, and 122 connections
+
+Design statistics:
+   Minimum period:   6.306ns{1}   (Maximum frequency: 158.579MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Mon Oct 20 11:17:04 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 83 MB
+
+
+

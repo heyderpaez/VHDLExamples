@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "E:/SEII/201.7SEG_Equals/Seg_Equals/Test_Bench2_isim_beh.exe" -prj "E:/SEII/201.7SEG_Equals/Seg_Equals/Test_Bench2_beh.prj" "work.Test_Bench2" 

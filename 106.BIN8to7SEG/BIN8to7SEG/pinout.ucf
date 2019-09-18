@@ -1,0 +1,25 @@
+Net "clk" LOC="B8";
+
+Net "BIN[0]" LOC="P11";
+Net "BIN[1]" LOC="L3";
+Net "BIN[2]" LOC="K3";
+Net "BIN[3]" LOC="B4";
+Net "BIN[4]" LOC="G3";
+Net "BIN[5]" LOC="F3";
+Net "BIN[6]" LOC="E2";
+Net "BIN[7]" LOC="N3";
+
+
+Net "SEGMENTS[0]" LOC="L14";
+Net "SEGMENTS[1]" LOC="H12";
+Net "SEGMENTS[2]" LOC="N14";
+Net "SEGMENTS[3]" LOC="N11";
+Net "SEGMENTS[4]" LOC="P12";
+Net "SEGMENTS[5]" LOC="L13";
+Net "SEGMENTS[6]" LOC="M12";
+Net "SEGMENTS[7]" LOC="N13";
+
+Net "DISPLAY[0]" LOC="K14";
+Net "DISPLAY[1]" LOC="M13";
+Net "DISPLAY[2]" LOC="J12";
+Net "DISPLAY[3]" LOC="F12"; 
