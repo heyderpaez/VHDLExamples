@@ -22,6 +22,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
+
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -31,14 +32,14 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity BIN8toBCD is
+entity BIN8to7SEG is
     Port ( clk : in STD_LOGIC;
 			  BIN : in  STD_LOGIC_VECTOR (7 downto 0);
            SEGMENTS: out STD_LOGIC_VECTOR(7 downto 0);
 			  DISPLAY: out STD_LOGIC_VECTOR (3 downto 0));
-end BIN8toBCD;
+end BIN8to7SEG;
 
-architecture Behavioral of BIN8toBCD is
+architecture Behavioral of BIN8to7SEG is
 	SIGNAL UND, DEC, CEN : STD_LOGIC_VECTOR (3 downto 0);
 	SIGNAL SEG0, SEG1, SEG2 : STD_LOGIC_VECTOR(7 downto 0);
 	type ESTADOS is (display0, display1, display2, display3);
@@ -49,6 +50,8 @@ begin
 	proceso_bcd: process(BIN)
 		variable Z: STD_LOGIC_VECTOR(11 downto 0);
 	begin
+		Z := "000000000000";
+		
 		Z(2 downto 0) := BIN(7 downto 5);
 		
 		for i in 4 downto 0 loop
@@ -141,9 +144,9 @@ begin
 		end case;
 	end process Estados_Mux;
 
-	Transicion_Mux: process(CLK, STDO_PRES) begin     --Falta añadir las otras temporizaciones.
-		if (CLK'event and CLK='1') then
-			if(CONTADOR<50000000) then
+	Transicion_Mux: process(CLK, STDO_PRES) begin     --Falta aÃ±adir las otras temporizaciones.
+		if (CLK' event and CLK='1') then
+			if(CONTADOR<50000) then
 					CONTADOR<=CONTADOR+1;
 			else
 					CONTADOR<=0;
